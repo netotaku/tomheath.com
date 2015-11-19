@@ -1,7 +1,7 @@
 <div class="publications">
   {% for publication in site.publications %}
     <article class="publications__article">
-      <a href="{{ publication.url }}" class="publications__link">
+      <a href="{{ site.baseurl }}{{ publication.url }}" class="publications__link">
         <h1 class="publications__header">
           {{ publication.title }}
         </h1>
