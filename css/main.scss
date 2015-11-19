@@ -1,0 +1,123 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+$lime: #D1E751;
+$sky: #4DBCE9;
+$sea: #26ADE4;
+
+@import "figure";
+@import "social";
+
+
+html,body{
+  padding: 0px;
+  margin: 0px;
+  background: #333;
+  font-family: 'Roboto', sans-serif;
+  color: #666;
+
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-text-rendering: optimizeLegibility;
+  -moz-text-rendering: optimizeLegibility;
+  -ms-text-rendering: optimizeLegibility;
+  -o-text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+
+}
+
+img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+[role=main]{
+  background: #fff;
+}
+
+.header{
+  // padding-top: 18rem;
+  // padding-bottom: 18rem;
+  background: $sky;
+  border-bottom: solid 4px $sea;
+  // background: url(../images/bg.jpg);
+  &__menu{
+    text-align: right;
+    line-height: 48px;
+    &__link{
+      display: inline-block;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  }
+}
+
+.header,
+.footer{
+  color: #fff;
+  a, a:hover{
+    color: #fff;
+  }
+}
+
+.footer{
+  color: #666;
+  a{
+    color: #666;
+    text-decoration: underline;
+  }
+}
+
+.section{
+  padding: 40px 0px;
+  &--half{
+    padding: 20px 0px;
+  }
+  &--compact{
+    padding: 10px 0px;
+  }
+  &--lime{
+    background: $lime;
+    *{
+      color: rgba(0,0,0,.3);
+    }
+  }
+}
+
+.brand{
+  // font-family: 'Lily Script One', cursive;
+  text-decoration: none;
+  font-size: 1.2em;
+  line-height: 48px;
+  font-weight: bold;
+  &__strap{
+    font-weight: normal;
+  }
+  &__link{
+    text-decoration: none;
+  }
+}
+
+ul{
+  li{
+    margin-bottom: 0px;
+  }
+}
+
+
+
+
+h1,h2,h3,h4,h5,h6{
+  font-weight: 900;
+  color: #111;
+}

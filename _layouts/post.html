@@ -1,0 +1,16 @@
+---
+layout: page
+---
+
+<p>
+  <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+    <i class="fa fa-clock-o"></i>
+    {{ page.date | date: "%b %-d, %Y" }}
+  </time>
+  {% if page.author %}
+    <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <span itemprop="name">{{ page.author }}</span>
+    </span>
+  {% endif %}
+</p>
+{{ content }}

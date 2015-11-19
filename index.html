@@ -1,0 +1,66 @@
+---
+layout: default
+---
+
+<div role="main">
+  <section class="section">
+    <div class="container">
+      <div class="four columns">
+        <figure class="figure">
+          <img src="http://bd7a65e2cb448908f934-86a50c88e47af9e1fb58ce0672b5a500.r32.cf3.rackcdn.com/uploads/assets/61/96/526196f8c0c715e815004292/square_tom_pic_bw.png">
+          <figcaption class="figure__caption">Dr Tom Heath</figcaption>
+        </figure>
+
+        <div class="connect">
+          <h3>Connect</h3>
+          <div class="list-group">
+            <a class="list-group-item" href="#"><i class="fa fa-twitter fa-fw"></i>&nbsp; Twitter</a>
+            <a class="list-group-item" href="#"><i class="fa fa-linkedin fa-fw"></i>&nbsp; LinkedIn</a>
+            <a class="list-group-item" href="#"><i class="fa fa-github-alt fa-fw"></i>&nbsp; GitHub</a>
+            <a class="list-group-item" href="#"><i class="fa fa-envelope fa-fw"></i>&nbsp; tom@tomheath.com</a>
+          </div>
+        </div>
+
+      </div> <!-- left -->
+      <div class="eight columns">
+
+        <h2>Dr Tom Heath is Head of Research at the Open Data Institute, where he has responsibility
+        for the ODI’s research programme.</h2>
+
+        <p>Reflecting the breadth of interest in open data this programme is multidisciplinary in nature,
+        with an emphasis in the computing and social sciences, and includes both publicly and commercially funded
+        projects. Tom oversees collaborative research proposals and projects involving the ODI,
+        in addition to the institute’s internship and visiting researcher programmes.</p>
+
+        <p>Tom joined the ODI from Talis Group, where he led internal research and data
+        science programmes drawing heavily on Open and Linked Data. He is the co-author of
+        several highly cited <a href="/publications">publications</a> on the topic of Linked Data, and the recipient of
+        a number of awards including Semantic Web Challenge winner 2007 and STI International
+        PhD of the Year 2008/9. Tom has a BSc in Psychology from the University of Liverpool
+        and a <a href="/phd">PhD in Computer Science</a> from The Open University.</p>
+
+        <h2>Posts</h2>
+
+        {% for post in site.posts %}
+          <article>
+            <h1>
+              <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            </h1>
+            <time><i class="fa fa-clock-o"></i> {{ post.date | date: "%b %-d, %Y" }}</time>
+          </article>
+        {% endfor %}
+
+      </div><!-- right -->
+    </div><!-- container -->
+  </section>
+</div> <!-- role main -->
+
+
+<aside class="section section--lime">
+  <div class="container">
+    <div class="twelve columns">
+      <h2>Publications</h2>
+      {% include publications.html %}
+    </div>
+  </div>
+</aside>
