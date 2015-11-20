@@ -11,7 +11,9 @@ layout: default
           <figcaption class="figure__caption">Dr Tom Heath</figcaption>
         </figure>
 
-        <div class="connect">
+        {% include social.html %}
+
+        <!-- <div class="connect">
           <h3>Connect</h3>
           <div class="list-group">
             <a class="list-group-item" href="#"><i class="fa fa-twitter fa-fw"></i>&nbsp; Twitter</a>
@@ -19,7 +21,7 @@ layout: default
             <a class="list-group-item" href="#"><i class="fa fa-github-alt fa-fw"></i>&nbsp; GitHub</a>
             <a class="list-group-item" href="#"><i class="fa fa-envelope fa-fw"></i>&nbsp; tom@tomheath.com</a>
           </div>
-        </div>
+        </div> -->
 
       </div> <!-- left -->
       <div class="eight columns">
@@ -39,22 +41,19 @@ layout: default
         PhD of the Year 2008/9. Tom has a BSc in Psychology from the University of Liverpool
         and a <a href="/phd">PhD in Computer Science</a> from The Open University.</p>
 
-        <h2>Posts</h2>
-
-        {% for post in site.posts %}
-          <article>
-            <h1>
-              <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-            </h1>
-            <time><i class="fa fa-clock-o"></i> {{ post.date | date: "%b %-d, %Y" }}</time>
-          </article>
-        {% endfor %}
-
       </div><!-- right -->
     </div><!-- container -->
   </section>
 </div> <!-- role main -->
 
+<aside class="section section--grey">
+  <div class="container">
+    <div class="twelve columns">
+      <h2>Posts</h2>
+      {% include posts.html %}
+    </div>
+  </div>
+</aside>
 
 <aside class="section section--lime">
   <div class="container">

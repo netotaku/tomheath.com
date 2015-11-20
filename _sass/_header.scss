@@ -1,0 +1,30 @@
+.header{
+  background: $sky;
+  border-bottom: solid 4px $sea;
+  font-weight: bold;
+  &__menu{
+    top: 0px;
+    right: 0px;
+    position: absolute;
+    line-height: 48px;
+    &__link{
+      display: inline-block;
+      margin-left: 20px;
+      text-decoration: none;
+    }
+  }
+  &__mobile{
+    display: none;
+    font-size: 2.2rem;
+  }
+  @media only screen and (max-width: 900px)  {
+    &__menu{
+      &__link{
+        display: none;
+      }
+    }
+    &__mobile{
+      display: block;
+    }
+  }
+}

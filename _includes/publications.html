@@ -1,13 +1,17 @@
-<div class="publications">
+<div class="cards grid">
   {% for publication in site.publications %}
-    <article class="publications__article">
-      <a href="{{ site.baseurl }}{{ publication.url }}" class="publications__link">
-        <h1 class="publications__header">
-          {{ publication.title }}
-        </h1>
-        <p>{{ publication.authors }}</p>
-        <p>{{ publication.year }}</p>
-      </a>
-    </article>
+    <div class="grid__unit">
+      <article class="cards__article cards--compact">
+        <a href="{{ publication.url | prepend: site.baseurl }}" class="cards__link">
+          <p class="cards__year">{{ publication.year }}</p>
+          <h1 class="cards__header cards__header--compact">
+            {{ publication.title }}
+          </h1>
+          <div class="cards__base">
+            <p class="cards__footer">{{ publication.authors }}</p>
+          </div>
+        </a>
+      </article>
+    </div>
   {% endfor %}
 </div>

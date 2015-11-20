@@ -1,0 +1,53 @@
+.cards{
+
+  margin: 0px -10px;
+
+  &__article{
+    background: rgba(0,0,0,.1);
+    padding: 20px;
+    margin: 10px;
+  }
+  &__link{
+    height: 32rem;
+    display: block;
+    color: #333;
+    &:hover{
+      text-decoration: none;
+      color: #333;
+    }
+    position: relative;
+  }
+  &__footer{
+    padding: 0px;
+    margin: 0px;
+  }
+  &__title{
+
+  }
+  &__year{
+    font-weight: bold;
+    margin: 0px;
+  }
+  &__header{
+    font-size: 3rem;
+    &--compact{
+      font-size: 1.8rem;
+      letter-spacing: 0px;
+      font-weight: 400;
+    }
+  }
+  &__base{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+  }
+  @media only screen and (max-width: 750px)  {
+    &__link{
+      height: auto;
+    }
+    &__base{
+      position: static;
+    }
+  }
+}

@@ -9,8 +9,9 @@ $sea: #26ADE4;
 
 @import "figure";
 @import "social";
-@import "publications";
-
+@import "grid";
+@import "cards";
+@import "header";
 
 html,body{
   padding: 0px;
@@ -45,23 +46,7 @@ img{
   background: #fff;
 }
 
-.header{
-  // padding-top: 18rem;
-  // padding-bottom: 18rem;
-  background: $sky;
-  border-bottom: solid 4px $sea;
-  // background: url(../images/bg.jpg);
-  &__menu{
-    text-align: right;
-    line-height: 48px;
-    &__link{
-      display: inline-block;
-      margin-left: 20px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-  }
-}
+
 
 .header,
 .footer{
@@ -90,8 +75,11 @@ img{
   &--lime{
     background: $lime;
     *{
-      color: rgba(0,0,0,.3);
+      color: rgba(0,0,0,.5);
     }
+  }
+  &--grey{
+    background: #f3f3f3;
   }
 }
 
@@ -120,5 +108,5 @@ ul{
 
 h1,h2,h3,h4,h5,h6{
   font-weight: 900;
-  color: #111;
+  color: #333;
 }

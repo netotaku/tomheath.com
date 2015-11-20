@@ -1,0 +1,17 @@
+<div class="cards grid">
+  {% for post in site.posts %}
+    <div class="grid__unit">
+      <article class="cards__article">
+        <a href="{{ post.url | prepend: site.baseurl }}" class="cards__link">
+          <p class="cards__year"><i class="fa fa-clock-o"></i> {{ post.date | date: "%b %-d, %Y" }}</p>
+          <h1 class="cards__header">
+            {{ post.title }}
+          </h1>
+          <div class="cards__base">
+            <p class="cards__footer">{{ post.excerpt }}</p>
+          </div>
+        </a>
+      </article>
+    </div>
+  {% endfor %}
+</div>

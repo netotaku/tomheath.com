@@ -1,0 +1,19 @@
+.grid{
+  position: relative;
+  overflow: hidden;
+  &__unit{
+    width: 33.33%;
+    float: left;
+  }
+  @media only screen and (max-width: 1100px)  {
+    &__unit{
+      width: 50%;
+    }
+  }
+  @media only screen and (max-width: 750px)  {
+    &__unit{
+      float: none;
+      width: auto;
+    }
+  }
+}

@@ -1,18 +1,22 @@
 <header class="section section--compact header">
   <div class="container">
     <div class="row">
-      <div class="four columns brand">
-        <a class="brand__link" href="{{ site.baseurl }}/">{{ site.title }}</a>
-        <span class="brand__strap"> - {{ site.strap }}</span>
-      </div>
-      <div class="eight columns">
+      <div class="tweleve">
+
+        <div class="brand">
+          <a class="brand__link" href="{{ site.baseurl }}/">{{ site.title }}</a>
+          <span class="brand__strap"> - {{ site.strap }}</span>
+        </div>
+
         <nav class="header__menu">
           {% for my_page in site.pages %}
             {% if my_page.title %}
             <a class="header__menu__link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
             {% endif %}
           {% endfor %}
+          <span class="header__mobile"><i class="fa fa-bars"></i></span>
         </nav>
+
       </div>
     </div>
   </div>
