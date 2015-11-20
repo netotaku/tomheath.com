@@ -95,6 +95,11 @@ img{
   &__link{
     text-decoration: none;
   }
+  @media only screen and (max-width: 340px)  {
+    &__strap{
+      display: none;
+    }
+  }
 }
 
 ul{
